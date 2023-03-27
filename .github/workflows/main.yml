@@ -15,5 +15,5 @@ jobs:
         - name: build banking
           working-directory: banking
           run: |
-            cmake -H. -B_built
+            cmake -S. -B_built
             cmake --build _built
