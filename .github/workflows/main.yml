@@ -32,7 +32,8 @@ jobs:
       - name: test
         shell: bash
         run: |
-          CXX=/usr/bin/g++-9 cmake -DCOVERAGE=1 -S. -B_built
+          mkdir _built && cd _built
+          CXX=/usr/bin/g++-7 cmake -DCOVERAGE=1 ..
           cmake --build _built
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
