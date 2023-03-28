@@ -34,6 +34,6 @@ jobs:
         run: |
           mkdir _built && cd _built
           CXX=/usr/bin/g++-7 cmake -DCOVERAGE=1 ..
-          cmake --build _built
+          cmake --build .
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
